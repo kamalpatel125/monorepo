@@ -40,6 +40,7 @@ const StyledButton = styled.button`
         border: 1px solid #000;
         background-color: #fff;
     }
+    
     ${(props) =>
         props.variant === APPEARANCES.SECONDARY &&
         css`
