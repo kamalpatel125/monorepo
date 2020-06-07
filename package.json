@@ -1,0 +1,44 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "bootstrap": "lerna bootstrap --use-workspaces",
+    "build": "lerna exec --parallel -- babel --root-mode upward src -d lib --ignore **/*.stories.js,**/*.spec.js",
+    "coverage": "jest --coverage",
+    "deploy-storybook": "storybook-to-ghpages",
+    "dev": "start-storybook -p 5555",
+    "lint:js": "eslint . --ext .js --ignore-pattern lib --ignore-pattern node_modules",
+    "lint:styles": "stylelint './packages/**/*.js'",
+    "lint": "yarn lint:js && yarn lint:styles",
+    "now-build": "build-storybook -c .storybook -o public",
+    "prettier": "prettier --write \"**/*.{js,json,md,yml}\"",
+    "lerna-publish": "lerna publish",
+    "test": "yarn build && yarn lint && yarn coverage",
+    "unit": "jest"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "@storybook/react": "^5.3.19",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-styled-components": "^1.10.7",
+    "lerna": "^3.22.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.1.1",
+    "webpack": "^4.43.0"
+  },
+  "dependencies": {
+    "@storybook/addon-docs": "^5.3.19",
+    "@storybook/addon-info": "^5.3.19"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
