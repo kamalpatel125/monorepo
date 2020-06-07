@@ -1,5 +1,5 @@
 {
-  "name": "root",
+  "name": "@kamalpatel125/monorepo",
   "workspaces": [
     "packages/*"
   ],

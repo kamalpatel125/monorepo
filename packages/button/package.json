@@ -1,5 +1,5 @@
 {
-  "name": "button",
+  "name": "@kamalpatel125/button",
   "version": "1.0.4",
   "main": "lib/index.js",
   "module": "src/index.js",
@@ -15,5 +15,6 @@
     "react": "^15.0.0 || ^16.0.0",
     "react-dom": "^15.0.0 || ^16.0.0",
     "styled-components": "^4.0.0"
-  }
+  },
+  "gitHead": "7acff9e2e4e9ca9e5132697a0dc2b939e044dbc2"
 }
